@@ -8,7 +8,6 @@ global destination
 destination  = 1
 
 print("Initializing...")
-print("WELCOME BACK MR T")
 
 def showMenu():
     global pl
