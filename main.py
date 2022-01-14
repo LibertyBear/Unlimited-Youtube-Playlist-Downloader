@@ -1,7 +1,7 @@
 import re
 from pytube import Playlist
 
-DOWNLOAD_DIR = 'C:\\Users\\tomia\\Documents\\PythonYoutubeDownloader\\Downloads\\Downloads'
+DOWNLOAD_DIR = 'C:\\Users\\tomia\\Documents\\PythonYoutubeDownloader\\Downloads'
 global pl 
 pl = "N/A"
 global destination
@@ -14,15 +14,12 @@ def showMenu():
     global destination
     print("+-----------------------------------+")
     print("+ Playlist URL:" + pl)
-    print("+ Target Folder (1-3): " + str(destination))
     print("+-----------------------------------+")
-    print("OPTIONS: setPlaylist, setTarget, execute, exit")
+    print("OPTIONS: setPlaylist, execute, exit")
 
     optn = input()
     if(optn == "setPlaylist"):
         setPlaylist()
-    elif(optn == "setTarget"):
-        setTarget()
     elif(optn == "execute"):
         execute()
     elif(optn == "exit"):
@@ -61,7 +58,7 @@ def execute():
             order_by('resolution').\
             desc().\
             first().\
-            download(DOWNLOAD_DIR + destination)
+            download(DOWNLOAD_DIR)
 
 showMenu()
 
