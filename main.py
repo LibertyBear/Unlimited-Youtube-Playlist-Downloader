@@ -1,7 +1,7 @@
 import re
 from pytube import Playlist
 
-DOWNLOAD_DIR = 'C:\\Users\\tomia\\Documents\\PythonYoutubeDownloader\\Downloads'
+DOWNLOAD_DIR = 'C:\\Users\\USER\\DIRECTORY\\DIRECTORY\\DIRECTORY'
 global pl 
 pl = "N/A"
 global destination
@@ -35,11 +35,6 @@ def setPlaylist():
     pl = input()
     showMenu()
 
-def setTarget():
-    global destination
-    print("Enter your desired download folder (1-3)")
-    destination = input()
-    showMenu()
 
 
 def execute():
